@@ -563,7 +563,8 @@
   .flex-container-work {
       display: flex;
       flex-direction: row;
-      padding-bottom: 100px;
+      padding-bottom: 0px;
+      align-items: center;
     }
     
   .flex-right-work {
@@ -572,11 +573,14 @@
       height: 25vh;
       margin: 5px;
       padding: 5px;
+      display: flex;
+      align-items: center; /* Ensures the logo stays centered */
+      justify-content: center;
     }
     
     .flex-left-work {
       width: 50%;
-      max-width: 100%;
+      width: 100%;
       margin: 5px;
       padding: 5px;
     }
@@ -596,7 +600,7 @@
   }
   
   p.ex1 {
-      margin-top: 75px;
+      margin-top: 70px;
     }
   
     /* work ex timeline */
@@ -781,3 +785,37 @@
         }
     }
     
+  
+    .flex-container-heading {
+      display: flex;
+      justify-content: space-between; /* Aligns heading left and button right */
+      align-items: center;
+      flex-wrap: wrap; /* Ensures responsiveness */
+      gap: 20px; /* Adds spacing */
+      margin-bottom: 20px; 
+  }
+  
+  .work-history-btn {
+      white-space: nowrap; /* Prevents button text from wrapping */
+      padding: 10px 15px;
+      font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+      .flex-container-heading {
+          flex-direction: column; /* Stack on smaller screens */
+          align-items: flex-start;
+      }
+  
+      .work-history-btn {
+          margin-top: 10px;
+      }
+  }
+
+  .job-duration {
+    font-size: 14px;  /* Smaller font size */
+    color: #6c757d;   /* Faded gray color */
+    margin-top: -25px; /* Slightly pulls it closer to the job title */
+    font-weight: 400; /* Lighter font weight */
+    margin-bottom: 20px; 
+} 
